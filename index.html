@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet"> 
+    <title>Generador</title>
+</head>
+<body>
+    <div class="container_title">
+        <h1>Codificar css</h1>
+        <span>Mauricio Archila</span>
+    </div>
+    <div class="container">
+        <div class="container_generador">
+            <div class="container_btns">
+                <div class="title_btn">
+                    <h2>Modifica tu contenedor</h2>
+                </div>
+                <div class="btns">
+                <label for="color">Colores</label>
+                <input type="color" name="color" id="btn_color" class="btn_range btn_color">
+
+                <label for="Transparencia">Transparencia</label>
+                <input type="range" class="btn_range btn1" name="Transparencia" id="btn_transparencia">
+
+                <label for="backdrop-filter">Difuminado</label>
+                <input type="range" class="btn_range btn2" name="backdrop-filter" id="btn_difuminado">
+
+                <label for="tamaño">Tamaño</label>
+                <input type="range" class="btn_range btn3" name="tamaño" id="btn_tamaño">
+
+                <label for="border-radius">Redondiado del borde</label>
+                <input type="range" class="btn_range btn4" name="border-radius" id="btn_border" min="0" max="50"> 
+
+                <label for="contraste">contraste</label>
+                <input type="range" class="btn_range btn5" name="contraste" id="btn_contraste"> 
+
+                <label for="suturacion">suturacion</label>
+                <input type="range" class="btn_range btn6" name="suturacion" id="btn_suturacion"> 
+
+                <button class="copiar" id="btn_copiar">Copiar</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container_cuadro_ejemplo">
+            <div class="cotainer_ejemplo">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

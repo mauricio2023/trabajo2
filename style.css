@@ -1,0 +1,77 @@
+:root {
+    --blur: 100px;
+    --contrast: 100%;
+    --suturate: 100%;
+    --r : 255;
+    --g : 255;
+    --b : 255;
+    --a : 100; 
+}
+
+*{
+    font-family: 'DynaPuff', cursive;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(imgs/macbook-pro-ocean-waves-ibkgdjhs31mjk1ed.jpg);
+
+    background-size: cover;
+    color: white;
+}
+
+.container_title{
+    text-align: center;
+}
+
+.container{
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container_generador{
+  
+   margin-right: 150px;
+
+}
+
+.container_btns{
+    border: solid white;
+}
+
+.btns{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.btn_range{
+  margin-bottom: 10px;
+}
+
+.container_cuadro_ejemplo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 400px;
+   height: 400px;
+}
+
+.cotainer_ejemplo{
+    border: solid white 1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backdrop-filter: blur(var(--blur)) contrast(var(--contrast)) saturate(var(--suturate));
+    background: rgba(var(--r), var(--g), var(--b), var(--a));
+    padding: 20px;
+}
