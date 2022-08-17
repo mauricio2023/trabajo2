@@ -5,8 +5,9 @@ let border = document.querySelector("#btn_border");
 let difuminado = document.querySelector("#btn_difuminado");
 let suturacion = document.querySelector("#btn_suturacion");
 let contraste = document.querySelector("#btn_contraste");
-let copiar = document.querySelector("#btn_copiar")
+let imprimir = document.querySelector("#btn_imprimir")
 let contenedor = document.querySelector(".cotainer_ejemplo")
+let containerResiltado = document.querySelector(".cotainer_ejemplo")
 
 function hexToRgb(hex){
     var c;
@@ -23,20 +24,25 @@ function hexToRgb(hex){
     }
 }
 }
-
+let colorEnHex = (color.value)
+let newColor = hexToRgb(colorEnHex)
+let {red, green, blue} = newColor
 
 tamaño.addEventListener("input", (e) => {
    contenedor.style.width = `${e.target.value}%`;
    contenedor.style.height = `${e.target.value}%`;
 })
 
- color.addEventListener("input", (e) => {    
-    let colorEnHex = (e.target.value)
-    let newColor = hexToRgb(colorEnHex)
-    let {red, green, blue} = newColor
+ color.addEventListener("input", (e) => {  
+
+     let colorEnHex = (color.value)
+     let newColor = hexToRgb(colorEnHex)
+     let {red, green, blue} = newColor
      contenedor.style.setProperty("--r", `${red}`)
      contenedor.style.setProperty("--g", `${green}`)
      contenedor.style.setProperty("--b", `${blue}`)
+     console.log(red, green, blue)
+    
  })
 
  transparencia.addEventListener('input', (e => {
@@ -46,6 +52,7 @@ tamaño.addEventListener("input", (e) => {
 
 border.addEventListener("input", (e) => {
     contenedor.style.borderRadius = `${e.target.value}%`;
+    
 })
 
 difuminado.addEventListener("input", (e) => {
@@ -58,4 +65,14 @@ suturacion.addEventListener("input", (e) => {
 
 contraste.addEventListener("input", (e) => {
     contenedor.style.setProperty ("--contrast", `${e.target.value}%`)
+})
+
+imprimir.addEventListener("click", (e) => {
+   containerResiltado.innerHTML =`<p class="p_resulrado">
+   width: ${tamaño.value}%; <br><br>
+   height: ${tamaño.value}%; <br><br>
+   border-radius: ${border.value}px; <br><br>
+   backdrop-filter: blur(${difuminado.value}px) contrast(${contraste.value}%) saturate(${suturacion.value}%); <br><br>
+   background: rgba(${red}, ${green}, ${blue}, ${transparencia.value * 1 / 100});<br><br>
+    </p>`
 })

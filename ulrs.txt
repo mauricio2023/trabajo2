@@ -1,0 +1,6 @@
+netlify
+https://delightful-pastelito-c06d98.netlify.app/
+
+
+gitHub
+https://github.com/mauricio2023/trabajo2
