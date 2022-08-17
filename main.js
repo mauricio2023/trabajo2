@@ -38,7 +38,6 @@ tamaño.addEventListener("input", (e) => {
      contenedor.style.setProperty("--r", `${red}`)
      contenedor.style.setProperty("--g", `${green}`)
      contenedor.style.setProperty("--b", `${blue}`)
-     console.log(red, green, blue)
     
  })
 
