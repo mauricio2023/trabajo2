@@ -24,9 +24,6 @@ function hexToRgb(hex){
     }
 }
 }
-let colorEnHex = (color.value)
-let newColor = hexToRgb(colorEnHex)
-let {red, green, blue} = newColor
 
 tamaño.addEventListener("input", (e) => {
    contenedor.style.width = `${e.target.value}%`;
@@ -66,6 +63,10 @@ suturacion.addEventListener("input", (e) => {
 contraste.addEventListener("input", (e) => {
     contenedor.style.setProperty ("--contrast", `${e.target.value}%`)
 })
+
+let colorEnHex = (color.value)
+let newColor = hexToRgb(colorEnHex)
+let {red, green, blue} = newColor
 
 imprimir.addEventListener("click", (e) => {
    containerResiltado.innerHTML =`<p class="p_resulrado">
